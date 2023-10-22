@@ -11,7 +11,7 @@ public class ChargingRequest {
     private String id;
     private Timestamp entry;
     private boolean roaming;
-    private String MSISDN;
+    private String MSISDNRequest;
 
     public String getId() {
         return id;
@@ -33,26 +33,27 @@ public class ChargingRequest {
         return roaming;
     }
 
+    public String getMSISDNRequest() {
+        return MSISDNRequest;
+    }
+
+    public void setMSISDNRequest(String MSISDNRequest) {
+        this.MSISDNRequest = MSISDNRequest;
+    }
+
     public void setRoaming(boolean roaming) {
         this.roaming = roaming;
     }
 
-    public String getMSISDN() {
-        return MSISDN;
-    }
-
-    public void setMSISDN(String MSISDN) {
-        this.MSISDN = MSISDN;
-    }
 
     public ChargingRequest() {
     }
 
-    public ChargingRequest(String id, Timestamp entry, boolean roaming, String MSISDN) {
+    public ChargingRequest(String id, Timestamp entry, boolean roaming, String MSISDNRequest) {
         this.id = id;
         this.entry = entry;
         this.roaming = roaming;
-        this.MSISDN = MSISDN;
+        this.MSISDNRequest = MSISDNRequest;
     }
 
 }
