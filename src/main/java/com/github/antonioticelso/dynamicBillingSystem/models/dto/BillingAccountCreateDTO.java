@@ -1,13 +1,14 @@
 package com.github.antonioticelso.dynamicBillingSystem.models.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.github.antonioticelso.dynamicBillingSystem.models.ChargingRequest;
 
 import java.time.LocalDateTime;
 
-public class BillingAccountDTO {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class BillingAccountCreateDTO {
 
-    private String id;
     private String MSISDNRequest;
     private int serviceId;
     private double bucket1;
@@ -16,17 +17,6 @@ public class BillingAccountDTO {
     private int counterA;
     private int counterB1;
     private int counterCTrue;
-    @JsonFormat(pattern = "dd/MM/yyyy HH:mm")
-    private LocalDateTime counterD;
-    private ChargingRequest chargingRequest;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getMSISDNRequest() {
         return MSISDNRequest;
@@ -92,23 +82,7 @@ public class BillingAccountDTO {
         this.counterCTrue = counterCTrue;
     }
 
-    public LocalDateTime getCounterD() {
-        return counterD;
-    }
-
-    public void setCounterD(LocalDateTime counterD) {
-        this.counterD = counterD;
-    }
-
-    public ChargingRequest getChargingRequest() {
-        return chargingRequest;
-    }
-
-    public void setChargingRequest(ChargingRequest chargingRequest) {
-        this.chargingRequest = chargingRequest;
-    }
-
-    public BillingAccountDTO() {
+    public BillingAccountCreateDTO() {
     }
 
 }
