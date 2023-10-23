@@ -21,6 +21,7 @@ public class BillingAccount {
     private int counterCTrue;
     private LocalDateTime counterD;
     private ChargingRequest chargingRequest;
+    private Double bill;
 
     public String getId() {
         return id;
@@ -92,6 +93,14 @@ public class BillingAccount {
 
     public void setCounterCTrue(int counterCTrue) {
         this.counterCTrue = counterCTrue;
+    }
+
+    public Double getBill() {
+        return bill;
+    }
+
+    public void setBill(Double bill) {
+        this.bill = bill;
     }
 
     public LocalDateTime getCounterD() {

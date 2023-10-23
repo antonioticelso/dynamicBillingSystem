@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(code = HttpStatus.NOT_FOUND)
 public class BillingNotFoundException extends RuntimeException {
 
-    public BillingNotFoundException() {
-        super("Billing not found. ");
+    public BillingNotFoundException(String id) {
+        super("Billing not found. " + id);
     }
 
 }
