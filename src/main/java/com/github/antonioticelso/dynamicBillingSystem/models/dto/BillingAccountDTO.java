@@ -1,10 +1,12 @@
 package com.github.antonioticelso.dynamicBillingSystem.models.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.github.antonioticelso.dynamicBillingSystem.models.ChargingRequest;
 
 import java.time.LocalDateTime;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class BillingAccountDTO {
 
     private String id;

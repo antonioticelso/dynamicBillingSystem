@@ -3,7 +3,6 @@ package com.github.antonioticelso.dynamicBillingSystem.services.impl;
 import com.github.antonioticelso.dynamicBillingSystem.exception.BillingNotFoundException;
 import com.github.antonioticelso.dynamicBillingSystem.models.BillingAccount;
 import com.github.antonioticelso.dynamicBillingSystem.models.BillingAccountCheckOut;
-import com.github.antonioticelso.dynamicBillingSystem.models.ChargingRequest;
 import com.github.antonioticelso.dynamicBillingSystem.repositorys.BillingRepository;
 import com.github.antonioticelso.dynamicBillingSystem.services.BillingService;
 import org.springframework.stereotype.Service;
